@@ -1,11 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import * as serviceWorkerRegistration from './serviceWorkerRegistration';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
+import reportWebVitals from "./reportWebVitals";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />
@@ -19,13 +19,13 @@ root.render(
 
 // ty https://stackoverflow.com/a/60263791
 serviceWorkerRegistration.register({
-  onUpdate: registration => {
-    alert('New version available!  Ready to update?');
+  onUpdate: (registration) => {
+    alert("New version available!  Ready to update?");
     if (registration && registration.waiting) {
-      registration.waiting.postMessage({ type: 'SKIP_WAITING' });
+      registration.waiting.postMessage({ type: "SKIP_WAITING" });
     }
     window.location.reload();
-  }
+  },
 });
 
 // If you want to start measuring performance in your app, pass a function
